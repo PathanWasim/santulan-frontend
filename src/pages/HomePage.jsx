@@ -3,7 +3,7 @@ import { PageLayout } from '../layouts/PageLayout';
 import { CriticalAlerts } from '../components/home/CriticalAlerts';
 import { FleetOverview } from '../components/home/FleetOverview';
 import { DepotStatusCards } from '../components/home/DepotStatusCards';
-import { RouteMonitoring } from '../components/home/RouteMonitoring';
+import { ActivePlansOverview } from '../components/home/ActivePlansOverview';
 import { mockAlerts } from '../mock-data/alerts';
 import api from '../services/api';
 import styles from './HomePage.module.css';
@@ -89,10 +89,10 @@ export const HomePage = () => {
         
         {/* Fleet & Depot - Two Column Layout */}
         <div className={styles.twoColumnSection}>
-          {/* Left Column: Fleet + Route Monitoring */}
+          {/* Left Column: Fleet + Active Plans */}
           <div className={styles.leftColumn}>
             <FleetOverview data={dashboardData} />
-            <RouteMonitoring />
+            <ActivePlansOverview />
           </div>
           
           {/* Right Column: Depot */}
