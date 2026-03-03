@@ -19,8 +19,8 @@ export default async function handler(req, res) {
   const { path } = req.query;
   const apiPath = Array.isArray(path) ? path.join('/') : path || '';
   
-  // Backend URL
-  const backendUrl = `http://51.21.226.149:8000/api/${apiPath}`;
+  // Backend URL - using HTTPS
+  const backendUrl = `https://santulan.duckdns.org/api/${apiPath}`;
   
   console.log(`[Proxy] ${req.method} ${apiPath}`);
   
